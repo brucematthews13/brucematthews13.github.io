@@ -5,6 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Projects — Bruce Matthews</title>
 <meta name="description" content="Featured engineering and data analytics projects by Bruce Matthews.">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<link rel="shortcut icon" href="assets/favicon.ico">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Projects — Bruce Matthews">
+<meta property="og:description" content="Featured engineering and data analytics projects by Bruce Matthews.">
+<meta property="og:url" content="https://brucematthews13.github.io/projects.html">
+<meta property="og:image" content="https://brucematthews13.github.io/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Projects — Bruce Matthews">
+<meta name="twitter:description" content="Featured engineering and data analytics projects by Bruce Matthews.">
+<meta name="twitter:image" content="https://brucematthews13.github.io/assets/og-image.png">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -104,12 +119,85 @@
 
     <section class="section">
       <div class="project">
+        <h2>Basketball Recruiting Decision Tool (AHP)</h2>
+        <div class="project-meta">Operations Research (IME 305) · Cal Poly SLO · Team Final Project</div>
+
+        <p>
+          Built a decision-support tool for a team final project: a coaching staff describes the kind of
+          player they need &mdash; position, scenario, and which traits matter most &mdash; and the model
+          returns a ranked list of the best-fit candidates from a pool of real Division I players.
+        </p>
+
+        <h3>The method</h3>
+        <p>
+          The core challenge is that "what makes a good fit" is subjective and multi-dimensional &mdash; a
+          team needing a rebounder values different things than one needing a scorer. We used the
+          <strong>Analytical Hierarchy Process (AHP)</strong> to turn those subjective priorities into
+          objective numeric weights, using pairwise comparison matrices (Saaty's 1&ndash;9 preference scale)
+          across six criteria: scoring efficiency, offensive impact, rebounding, defensive impact, basketball
+          IQ, and physical profile.
+        </p>
+
+        <h3>What the model does</h3>
+        <ul class="bullets">
+          <li>Pulls real season and combine data for ~78 Division I players &mdash; shooting efficiency,
+          plus/minus, rebound rate, steal % + block %, assist/turnover ratio, and physical measurables like
+          vertical leap and lane agility time.</li>
+          <li>Normalizes every metric onto a common 0&ndash;1 scale (using each metric's max/min/span) so
+          stats with completely different units can be fairly compared side by side.</li>
+          <li>Combines the normalized player data with the AHP-derived criteria weights to compute a single
+          composite fit score per player.</li>
+          <li>Ranks all candidates by that score and surfaces the top matches for the specified positional
+          need and scenario.</li>
+        </ul>
+
+        <p>
+          Beyond basketball, this is the same structure used for real business decisions with competing,
+          hard-to-compare criteria &mdash; vendor selection, hiring, or sourcing decisions &mdash; which is
+          why AHP is a standard operations research and consulting tool, not just a sports analytics one.
+        </p>
+
+        <p class="project-meta" style="margin-top:20px;">Tools: Microsoft Excel (AHP pairwise weighting, data normalization, composite scoring)</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="project">
         <h2>5S Process Improvement Project</h2>
         <div class="project-meta">Cal Poly SLO · Team Project · 11/2025</div>
+
         <p>
           Applied the 5S methodology (Sort, Set in Order, Shine, Standardize, Sustain) to analyze and redesign
-          a university housing workflow, identifying automation opportunities and proposing a streamlined,
-          self-service process.
+          Cal Poly's university housing room-change process, run through the StarRez housing platform.
+        </p>
+
+        <h3>The problem</h3>
+        <p>
+          Housing staff had to manually pull availability reports out of StarRez, clean and sort the data in
+          Excel, and hand-compare it against each student's room preferences before approving a change &mdash;
+          a slow, fully manual matching process with no automation.
+        </p>
+
+        <h3>Recommendations by category</h3>
+        <ul class="bullets">
+          <li><strong>Sort:</strong> use StarRez's built-in Auto-Allocate feature to automatically match
+          available rooms against student-requested rooms/buildings, removing the need to manually
+          cross-reference spreadsheets.</li>
+          <li><strong>Set in Order:</strong> add an automated notification/email step so staff are alerted
+          exactly when a request needs their action, on top of StarRez's existing status-tracking tabs.</li>
+          <li><strong>Shine:</strong> keep submitted requests moved into "offered" status on a fixed weekly
+          cadence, so the queue stays clean before the next round of changes is processed.</li>
+          <li><strong>Standardize:</strong> formalize the already-consistent weekly process into a documented
+          schedule of roles and responsibilities.</li>
+          <li><strong>Sustain:</strong> post visual workflow references and build a standardized training
+          path for new staff, so the process holds up as people rotate through the role.</li>
+        </ul>
+
+        <p>
+          We benchmarked the recommendation against real hospitality-industry 5S rollouts &mdash; including a
+          resort that used 5S to shorten housekeeping turnover times and a hotel that cut room-cleaning time by
+          40% &mdash; to ground the proposal in results other organizations had actually achieved with the same
+          methodology.
         </p>
       </div>
     </section>
