@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Bruce Matthews</title>
+<meta name="description" content="Featured engineering and data analytics projects by Bruce Matthews.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="site-name" href="index.html">Bruce Matthews</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="experience.html">Experience</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="skills.html">Skills</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <section class="section">
+      <p class="eyebrow">Case Studies</p>
+      <h1>Projects</h1>
+      <p class="lede">Selected engineering and consulting work from coursework and student consulting.</p>
+    </section>
+
+    <section class="section">
+      <div class="project">
+        <h2>Sequel Tea — Business Analytics &amp; Dashboard</h2>
+        <div class="project-meta">
+          Systems Optimization Club (Cal Poly SLO) · Project Lead · Team of 5
+        </div>
+
+        <p>
+          Sequel Tea, a boba tea shop launching a new on-campus store, needed a way to actually see how the
+          business was performing &mdash; instead of retyping sales numbers into spreadsheets by hand every day.
+          I led a 5-person student consulting team to design and build a live analytics dashboard that pulls
+          directly from the store's point-of-sale systems.
+        </p>
+
+        <h3>The problem</h3>
+        <p>
+          Sales and financial data came from two disconnected sources &mdash; Grubhub (online orders) and
+          Micros (in-store POS) &mdash; and had to be manually entered and charted, taking roughly 10 minutes
+          per update with limited, inconsistent visuals and no automated reporting.
+        </p>
+
+        <h3>What I built (with my team)</h3>
+        <p>
+          As project lead and primary client contact, I coordinated requirements gathering and stakeholder
+          meetings with Sequel Tea, then directed the design of:
+        </p>
+        <ul class="bullets">
+          <li>An automated ETL data pipeline (Google Apps Script) that detects, parses, and loads Grubhub
+          and Micros CSV exports every night &mdash; with error handling that routes bad files to a review
+          folder instead of silently failing.</li>
+          <li>Three live Google Data Studio dashboards: <strong>Sales</strong> (channel mix, daily/weekly
+          trends, category breakdowns), <strong>Financial</strong> (revenue, COGS %, labor %, revenue per
+          labor hour), and <strong>Inventory</strong> (ingredient usage, week-over-week comparisons,
+          restocking signals).</li>
+          <li>A COGS and ingredient-consumption calculator that derives material costs and usage straight
+          from sales data and recipes, instead of requiring manual tracking.</li>
+          <li>A 25-page user guide documenting how to operate, maintain, and troubleshoot the entire system
+          for non-technical staff.</li>
+        </ul>
+
+        <h3>Results</h3>
+        <div class="stat-row">
+          <div class="stat"><span class="num">98%</span><span class="label">reduction in data-processing time</span></div>
+          <div class="stat"><span class="num">~10 sec</span><span class="label">vs. ~10 min manual entry, per update</span></div>
+          <div class="stat"><span class="num">3</span><span class="label">live dashboards shipped (sales, financial, inventory)</span></div>
+        </div>
+
+        <blockquote>
+          &ldquo;More than just a time difference, because the data in those 10 minutes is nowhere near as
+          comprehensive.&rdquo; &mdash; Justin Chan, Sequel Tea
+        </blockquote>
+
+        <p>
+          Beyond the time savings, the dashboards gave ownership faster access to decision-relevant metrics
+          for staffing, inventory, and pricing, and set up the data pipeline to scale as Sequel Tea expands to
+          new locations.
+        </p>
+
+        <h3>What I learned</h3>
+        <p>
+          Scoping a project so it stays achievable and genuinely useful matters more than adding features;
+          tailoring technical explanations to a non-technical audience (and scheduling regular client
+          check-ins) made the difference between a dashboard that looked good and one the client actually
+          adopted.
+        </p>
+
+        <p class="project-meta" style="margin-top:20px;">Tools: Google Data Studio · Google Sheets · Apps Script (JavaScript) · Grubhub &amp; Micros POS data</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="project">
+        <h2>5S Process Improvement Project</h2>
+        <div class="project-meta">Cal Poly SLO · Team Project · 11/2025</div>
+        <p>
+          Applied the 5S methodology (Sort, Set in Order, Shine, Standardize, Sustain) to analyze and redesign
+          a university housing workflow, identifying automation opportunities and proposing a streamlined,
+          self-service process.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="project">
+        <h2>Hands-on engineering builds</h2>
+        <div class="project-meta">Cal Poly SLO — coursework</div>
+        <ul class="bullets">
+          <li><strong>Prism LED (PCB electronics):</strong> assembly, soldering, and multimeter-based testing.</li>
+          <li><strong>Air motor assembly:</strong> precision-machined (manual lathe, CNC mill) and
+          SolidWorks-designed, tested to approximately 1,300 RPM.</li>
+        </ul>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <span>&copy; 2026 Bruce Matthews</span>
+    <span><a href="contact.html">Get in touch</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
