@@ -17,4 +17,4 @@ Edit any `.html` file directly (they're plain text), then re-upload the changed 
 
 ## Live site
 Once GitHub Pages is enabled on this repo, the site is live at:
-`https://<your-github-username>.github.io`
+`(https://github.com/brucematthews13/brucematthews13.github.io)`
